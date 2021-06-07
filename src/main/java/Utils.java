@@ -15,7 +15,7 @@ public class Utils {
         int i;
 
         for (byte datum : data) {
-            for (i = 0x80; i != 0; i >>= 1) {
+            for (i = 0x80; i != 0; i >>>= 1) {
                 if ((crc & 0x8000) != 0) {
                     crc <<= 1;
                     crc ^= 0x1021;
